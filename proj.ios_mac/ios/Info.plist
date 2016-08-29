@@ -10,8 +10,44 @@
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string>Icon-57.png</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon-29</string>
+		<string>Icon-40</string>
+		<string>Icon-50</string>
+		<string>Icon-57</string>
+		<string>Icon-58</string>
+		<string>Icon-72</string>
+		<string>Icon-76</string>
+		<string>Icon-80</string>
+		<string>Icon-87</string>
+		<string>Icon-100</string>
+		<string>Icon-114</string>
+		<string>Icon-120</string>
+		<string>Icon-144</string>
+		<string>Icon-152</string>
+		<string>Icon-180</string>
+	</array>
+	<key>CFBundleIconFiles~ipad</key>
+	<array>
+		<string>Icon-29</string>
+		<string>Icon-40</string>
+		<string>Icon-50</string>
+		<string>Icon-57</string>
+		<string>Icon-58</string>
+		<string>Icon-72</string>
+		<string>Icon-76</string>
+		<string>Icon-80</string>
+		<string>Icon-87</string>
+		<string>Icon-100</string>
+		<string>Icon-114</string>
+		<string>Icon-120</string>
+		<string>Icon-144</string>
+		<string>Icon-152</string>
+		<string>Icon-180</string>
+	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.kencoder.DemoGame1</string>
+	<string>io.kencoder.SimpleTDDDemo</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -32,7 +68,6 @@
 	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 </dict>

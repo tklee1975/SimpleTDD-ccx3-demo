@@ -1,9 +1,6 @@
 #o Ignore thumbnails created by windows
 Thumbs.db
 
-# cocos2d library
-cocos2d
-
 # Ignore files build by Visual Studio
 *.obj
 *.exe
@@ -110,3 +107,11 @@ tags
 /lib
 /build/linux-build
 
+
+# cocos2d folder
+/cocos2d
+
+# File made by sdkbox
+n/
+backup*/
+backup*.zip

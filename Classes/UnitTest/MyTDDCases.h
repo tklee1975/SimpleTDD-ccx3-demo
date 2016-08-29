@@ -9,8 +9,7 @@
 
 
 // Add the Header here!
-#include "TDDSample.h"
-#include "Example1Test.h"
+#include "TDD2SampleTest.h"
 
 //#include#
 // NOTE!!! The above line is used to generate new unit test, must not be removed.
@@ -18,8 +17,8 @@
 // Define
 TDD_CASES
 {
-	TEST(TDDSample),
-	TEST(Example1Test),
+	TEST(TDD2SampleTest),
+	
 	
 //#testcase#
 // NOTE!!! The above line is used to generate new unit test, must not be removed.

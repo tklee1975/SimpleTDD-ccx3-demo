@@ -49,6 +49,7 @@ protected:
 	void setMenuVisible(bool flag);
 	void setToolBarOpacity(GLubyte value);
 	void setBackgroundColor(const Color3B &color);
+	void clearNodes();
 
 private:
 	void setupGUI();
@@ -86,7 +87,7 @@ private:
 
 typedef struct {
 	const char *name;
-	std::function<TDDTest *()> callback;
+	std::function<Scene *()> callback;
 } TDDTestCase;
 
 

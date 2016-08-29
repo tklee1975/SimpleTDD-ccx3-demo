@@ -3,8 +3,10 @@
 
 USING_NS_CC;
 
-#define kWidth	320
-#define kHeight 480
+static cocos2d::Size designResolutionSize = cocos2d::Size(320, 480);
+static cocos2d::Size smallResolutionSize = cocos2d::Size(320, 480);
+static cocos2d::Size mediumResolutionSize = cocos2d::Size(768, 1024);
+static cocos2d::Size largeResolutionSize = cocos2d::Size(1536, 2048);
 
 AppDelegate::AppDelegate() {
 
@@ -25,22 +27,11 @@ void AppDelegate::initGLContextAttrs()
     GLView::setGLContextAttrs(glContextAttrs);
 }
 
-void setupResolutionPolicy(float designW, float designH)
+// If you want to use packages manager to install more packages, 
+// don't modify or remove this function
+static int register_all_packages()
 {
-	GLView *view = Director::getInstance()->getOpenGLView();
-	Size screenSize = view->getFrameSize();
-	
-	log("design:(%f,%f) screen:(%f,%f)", designW, designH, screenSize.width, screenSize.height);
-	
-	
-	float designRatio = designW / designH;
-	float screenRatio = screenSize.height / screenSize.width;
-	
-	ResolutionPolicy resolutionPolicy = screenRatio < designRatio ?
-			ResolutionPolicy::FIXED_HEIGHT : ResolutionPolicy::FIXED_WIDTH;
-
-
-	view->setDesignResolutionSize(designW, designH, resolutionPolicy);
+    return 0; //flag for packages manager
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
@@ -48,18 +39,43 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLViewImpl::create("My Game");
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
+        glview = GLViewImpl::createWithRect("SimpleTDDDemo", Rect(0, 0, designResolutionSize.width, designResolutionSize.height));
+#else
+        glview = GLViewImpl::create("SimpleTDDDemo");
+#endif
         director->setOpenGLView(glview);
     }
-	setupResolutionPolicy(kWidth, kHeight);
 
-	director->setContentScaleFactor(2);
-	
     // turn on display FPS
     director->setDisplayStats(true);
 
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
+
+    // Set the design resolution
+    glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::FIXED_WIDTH);
+	
+	Size frameSize = glview->getFrameSize();
+    // if the frame's height is larger than the height of medium size.
+    if (frameSize.height > mediumResolutionSize.height)
+    {        
+        director->setContentScaleFactor(MIN(largeResolutionSize.height/designResolutionSize.height, largeResolutionSize.width/designResolutionSize.width));
+    }
+    // if the frame's height is larger than the height of small size.
+    else if (frameSize.height > smallResolutionSize.height)
+    {        
+        director->setContentScaleFactor(MIN(mediumResolutionSize.height/designResolutionSize.height, mediumResolutionSize.width/designResolutionSize.width));
+    }
+    // if the frame's height is smaller than the height of medium size.
+    else
+    {        
+        director->setContentScaleFactor(MIN(smallResolutionSize.height/designResolutionSize.height, smallResolutionSize.width/designResolutionSize.width));
+    }
+	
+	log("scaleFactor: %f", director->getContentScaleFactor());
+
+    register_all_packages();
 
     // create a scene. it's an autorelease object
     auto scene = HelloWorld::createScene();
