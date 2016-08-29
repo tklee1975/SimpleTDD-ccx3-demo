@@ -1,0 +1,48 @@
+#ifdef ENABLE_TDD
+//
+//  #TestName#Test.m
+//	TDD Framework
+//
+//
+#include "#TestName#Test.h"
+#include "TDDHelper.h"
+
+void #TestName#Test::setUp()
+{
+	log("TDD Setup is called");
+}
+
+
+void #TestName#Test::tearDown()
+{
+	log("TDD tearDown is called");
+}
+
+void #TestName#Test::willRunTest(const std::string &name)
+{
+	log("Before run %s", name.c_str());
+}
+
+void #TestName#Test::didRunTest(const std::string &name)
+{
+	log("After run %s", name.c_str());
+}
+
+
+#pragma mark -
+#pragma mark List of Sub Tests
+
+void #TestName#Test::defineTests()
+{
+	ADD_TEST(testSample);
+}
+
+#pragma mark -
+#pragma mark Sub Test Definition
+void #TestName#Test::testSample()
+{
+	log("this is a sample subTest");
+}
+
+
+#endif
