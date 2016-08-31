@@ -10,6 +10,8 @@
 
 // Add the Header here!
 #include "TDD2SampleTest.h"
+#include "CocosGUITest.h"
+#include "SpriteCreateTest.h"
 
 //#include#
 // NOTE!!! The above line is used to generate new unit test, must not be removed.
@@ -17,6 +19,8 @@
 // Define
 TDD_CASES
 {
+	TEST(SpriteCreateTest),
+	TEST(CocosGUITest),
 	TEST(TDD2SampleTest),
 	
 	

@@ -1,0 +1,75 @@
+<Solution>
+  <PropertyGroup Name="cocosstudio" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="image">
+          <Image Name="background.png" />
+          <Image Name="progress_bg.png" />
+          <Image Name="progress_fill.png" />
+          <Image Name="simpleTDD-icon.png" />
+        </Folder>
+        <Folder Name="spritesheet">
+          <PlistImageFolder Image="game.png" PListFile="game.plist" Name=".game_PList.Dir">
+            <PlistImageFile Name="UIbg.png" Key="UIbg.png" />
+            <PlistImageFile Name="buttonLarge.png" Key="buttonLarge.png" />
+            <PlistImageFile Name="buttonSmall.png" Key="buttonSmall.png" />
+            <PlistImageFile Name="frame_0000.png" Key="frame_0000.png" />
+            <PlistImageFile Name="frame_0001.png" Key="frame_0001.png" />
+            <PlistImageFile Name="frame_0002.png" Key="frame_0002.png" />
+            <PlistImageFile Name="groundDirt.png" Key="groundDirt.png" />
+            <PlistImageFile Name="groundGrass.png" Key="groundGrass.png" />
+            <PlistImageFile Name="groundIce.png" Key="groundIce.png" />
+            <PlistImageFile Name="groundRock.png" Key="groundRock.png" />
+            <PlistImageFile Name="groundSnow.png" Key="groundSnow.png" />
+            <PlistImageFile Name="medalBronze.png" Key="medalBronze.png" />
+            <PlistImageFile Name="medalGold.png" Key="medalGold.png" />
+            <PlistImageFile Name="medalSilver.png" Key="medalSilver.png" />
+            <PlistImageFile Name="planeBlue1.png" Key="planeBlue1.png" />
+            <PlistImageFile Name="planeBlue2.png" Key="planeBlue2.png" />
+            <PlistImageFile Name="planeBlue3.png" Key="planeBlue3.png" />
+            <PlistImageFile Name="planeGreen1.png" Key="planeGreen1.png" />
+            <PlistImageFile Name="planeGreen2.png" Key="planeGreen2.png" />
+            <PlistImageFile Name="planeGreen3.png" Key="planeGreen3.png" />
+            <PlistImageFile Name="planeRed1.png" Key="planeRed1.png" />
+            <PlistImageFile Name="planeRed2.png" Key="planeRed2.png" />
+            <PlistImageFile Name="planeRed3.png" Key="planeRed3.png" />
+            <PlistImageFile Name="planeYellow1.png" Key="planeYellow1.png" />
+            <PlistImageFile Name="planeYellow2.png" Key="planeYellow2.png" />
+            <PlistImageFile Name="planeYellow3.png" Key="planeYellow3.png" />
+            <PlistImageFile Name="puffLarge.png" Key="puffLarge.png" />
+            <PlistImageFile Name="puffSmall.png" Key="puffSmall.png" />
+            <PlistImageFile Name="rock.png" Key="rock.png" />
+            <PlistImageFile Name="rockDown.png" Key="rockDown.png" />
+            <PlistImageFile Name="rockGrass.png" Key="rockGrass.png" />
+            <PlistImageFile Name="rockGrassDown.png" Key="rockGrassDown.png" />
+            <PlistImageFile Name="rockIce.png" Key="rockIce.png" />
+            <PlistImageFile Name="rockIceDown.png" Key="rockIceDown.png" />
+            <PlistImageFile Name="rockSnow.png" Key="rockSnow.png" />
+            <PlistImageFile Name="rockSnowDown.png" Key="rockSnowDown.png" />
+            <PlistImageFile Name="starBronze.png" Key="starBronze.png" />
+            <PlistImageFile Name="starGold.png" Key="starGold.png" />
+            <PlistImageFile Name="starSilver.png" Key="starSilver.png" />
+            <PlistImageFile Name="tap.png" Key="tap.png" />
+            <PlistImageFile Name="tapLeft.png" Key="tapLeft.png" />
+            <PlistImageFile Name="tapRight.png" Key="tapRight.png" />
+            <PlistImageFile Name="tapTick.png" Key="tapTick.png" />
+            <PlistImageFile Name="textGameOver.png" Key="textGameOver.png" />
+            <PlistImageFile Name="textGetReady.png" Key="textGetReady.png" />
+          </PlistImageFolder>
+        </Folder>
+        <Folder Name="gui">
+          <Project Name="GUITest.csd" Type="Scene" />
+          <Project Name="TextureTest.csd" Type="Layer" />
+        </Folder>
+        <Folder Name="font">
+          <TTF Name="arial-round-bold.ttf" />
+          <Fnt Name="digit.fnt" />
+        </Folder>
+        <Folder Name="animation">
+          <Project Name="plane.csd" Type="Node" />
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
