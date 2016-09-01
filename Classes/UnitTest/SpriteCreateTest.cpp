@@ -8,6 +8,10 @@
 #include "TDDHelper.h"
 #include "VisibleRect.h"
 
+#include "ui/CocosGUI.h"
+#include "cocostudio/CocoStudio.h"
+
+
 void SpriteCreateTest::setUp()
 {
 	log("TDD Setup is called");
@@ -66,16 +70,25 @@ void SpriteCreateTest::createByFrame()
 
 void SpriteCreateTest::createByTexture()
 {
-	// TODO
+	Node *csbNode = CSLoader::createNode("gui/TextureTest.csb");
 	
-//	// Load the spritesheet first
-//	SpriteFrameCache::getInstance()->addSpriteFramesWithFile("spritesheet/game.plist");
-//	
-//	// planeBlue1.png
-//	Sprite *sprite = Sprite::createWithSpriteFrameName("planeRed1.png");
-//	sprite->setPosition(VisibleRect::center());
-//	
-//	addChild(sprite);
+	Size contentSize = csbNode->getContentSize();	// Size(300, 300);
+
+	RenderTexture *texture = RenderTexture::create(contentSize.width, contentSize.height,
+												   Texture2D::PixelFormat::RGBA8888);
+	
+	texture->begin();
+	//this->visit();		// show the screen capture of this view
+	csbNode->visit();
+	texture->end();
+	//texture->set
+	
+	Rect rect = Rect(Vec2(0, 0), contentSize);
+	Sprite *sprite = Sprite::createWithTexture(texture->getSprite()->getTexture());
+	sprite->setScale(1, -1);
+	sprite->setPosition(VisibleRect::center());
+	addChild(sprite);
+	
 }
 
 #endif
