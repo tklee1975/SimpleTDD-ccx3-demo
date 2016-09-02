@@ -72,20 +72,18 @@ void SpriteCreateTest::createByTexture()
 {
 	Node *csbNode = CSLoader::createNode("gui/TextureTest.csb");
 	
-	Size contentSize = csbNode->getContentSize();	// Size(300, 300);
+	Size contentSize = csbNode->getContentSize();
 
 	RenderTexture *texture = RenderTexture::create(contentSize.width, contentSize.height,
 												   Texture2D::PixelFormat::RGBA8888);
 	
 	texture->begin();
-	//this->visit();		// show the screen capture of this view
 	csbNode->visit();
 	texture->end();
-	//texture->set
 	
 	Rect rect = Rect(Vec2(0, 0), contentSize);
 	Sprite *sprite = Sprite::createWithTexture(texture->getSprite()->getTexture());
-	sprite->setScale(1, -1);
+	sprite->setFlippedY(true);
 	sprite->setPosition(VisibleRect::center());
 	addChild(sprite);
 	

@@ -1,5 +1,15 @@
 <UserData Version="3.10.0.0">
   <Properties>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="gui/GUITest.csd" />
+          <FilePathData Path="animation/plane.csd" />
+          <FilePathData Path="gui/TextureTest.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="gui/TextureTest.csd" />
+      </Value>
+    </Item>
     <Item Key="CocosRecentOperation">
       <Value ctype="CocosRecentOperation">
         <LastPublishType Value="Resource" />

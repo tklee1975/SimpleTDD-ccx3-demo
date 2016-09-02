@@ -117,6 +117,7 @@
 		738D21841D749D9100DBE855 /* TDDTestMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738D215A1D749D9100DBE855 /* TDDTestMenu.cpp */; };
 		738D21851D749D9100DBE855 /* TDDTopBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738D215C1D749D9100DBE855 /* TDDTopBar.cpp */; };
 		738D21861D749D9100DBE855 /* TDDTopBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738D215C1D749D9100DBE855 /* TDDTopBar.cpp */; };
+		73A8C3C51D787D4F004C1DCB /* SpriteTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73A8C3C31D787D4F004C1DCB /* SpriteTest.cpp */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -269,6 +270,8 @@
 		738D215D1D749D9100DBE855 /* TDDTopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDDTopBar.h; sourceTree = "<group>"; };
 		738D215E1D749D9100DBE855 /* TDDTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDDTypes.h; sourceTree = "<group>"; };
 		738D21601D749D9100DBE855 /* MyTDDCases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTDDCases.h; sourceTree = "<group>"; };
+		73A8C3C31D787D4F004C1DCB /* SpriteTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteTest.cpp; sourceTree = "<group>"; };
+		73A8C3C41D787D4F004C1DCB /* SpriteTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteTest.h; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -550,6 +553,8 @@
 		738D215F1D749D9100DBE855 /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
+				73A8C3C31D787D4F004C1DCB /* SpriteTest.cpp */,
+				73A8C3C41D787D4F004C1DCB /* SpriteTest.h */,
 				7384BF4A1D76684800B9A522 /* SpriteCreateTest.cpp */,
 				7384BF4B1D76684800B9A522 /* SpriteCreateTest.h */,
 				7384BF2E1D7660DD00B9A522 /* CocosGUITest.cpp */,
@@ -717,6 +722,7 @@
 				738D216B1D749D9100DBE855 /* TDDHelper.cpp in Sources */,
 				7384BF4C1D76684800B9A522 /* SpriteCreateTest.cpp in Sources */,
 				7384BF441D7663C200B9A522 /* README.md in Sources */,
+				73A8C3C51D787D4F004C1DCB /* SpriteTest.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				738D216F1D749D9100DBE855 /* TDDManager.cpp in Sources */,
 				738D216D1D749D9100DBE855 /* TDDMainLayer.cpp in Sources */,

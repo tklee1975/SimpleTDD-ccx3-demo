@@ -3,6 +3,17 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
+        <Folder Name="animation">
+          <Project Name="plane.csd" Type="Node" />
+        </Folder>
+        <Folder Name="font">
+          <TTF Name="arial-round-bold.ttf" />
+          <Fnt Name="digit.fnt" />
+        </Folder>
+        <Folder Name="gui">
+          <Project Name="GUITest.csd" Type="Scene" />
+          <Project Name="TextureTest.csd" Type="Layer" />
+        </Folder>
         <Folder Name="image">
           <Image Name="background.png" />
           <Image Name="progress_bg.png" />
@@ -11,7 +22,6 @@
         </Folder>
         <Folder Name="spritesheet">
           <PlistImageFolder Image="game.png" PListFile="game.plist" Name=".game_PList.Dir">
-            <PlistImageFile Name="UIbg.png" Key="UIbg.png" />
             <PlistImageFile Name="buttonLarge.png" Key="buttonLarge.png" />
             <PlistImageFile Name="buttonSmall.png" Key="buttonSmall.png" />
             <PlistImageFile Name="frame_0000.png" Key="frame_0000.png" />
@@ -56,18 +66,8 @@
             <PlistImageFile Name="tapTick.png" Key="tapTick.png" />
             <PlistImageFile Name="textGameOver.png" Key="textGameOver.png" />
             <PlistImageFile Name="textGetReady.png" Key="textGetReady.png" />
+            <PlistImageFile Name="UIbg.png" Key="UIbg.png" />
           </PlistImageFolder>
-        </Folder>
-        <Folder Name="gui">
-          <Project Name="GUITest.csd" Type="Scene" />
-          <Project Name="TextureTest.csd" Type="Layer" />
-        </Folder>
-        <Folder Name="font">
-          <TTF Name="arial-round-bold.ttf" />
-          <Fnt Name="digit.fnt" />
-        </Folder>
-        <Folder Name="animation">
-          <Project Name="plane.csd" Type="Node" />
         </Folder>
       </RootFolder>
     </Group>
