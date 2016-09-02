@@ -644,6 +644,3 @@ void TDDHelper::resolveAlign(TDDAlign align, TDDAlign &verticalAlign, TDDAlign &
 	
 	
 }
-
-
-
