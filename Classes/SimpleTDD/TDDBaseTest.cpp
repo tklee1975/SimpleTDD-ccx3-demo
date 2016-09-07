@@ -164,4 +164,43 @@ void TDDBaseTest::findBaseNode()
 }
 
 
+void TDDBaseTest::hideMenu()
+{
+	setMenuVisible(false);
+}
+
+void TDDBaseTest::toggleStat()
+{
+	Director *director = Director::getInstance();
+	bool hasStat = director->isDisplayStats();
+	director->setDisplayStats(! hasStat);
+}
+
+void TDDBaseTest::setMenuVisible(bool flag)
+{
+	if(mTestMenu) {
+		mTestMenu->setVisible(flag);
+	}
+}
+
+
+void TDDBaseTest::clearNodes()
+{
+	clearChildren();
+}
+
+void TDDBaseTest::setMenuPostion(const Vec2 &pos)
+{
+	if(mTestMenu) {
+		mTestMenu->setPosition(pos);
+	}
+}
+
+void TDDBaseTest::setMenuSize(const Size &size)
+{
+	if(mTestMenu) {
+		mTestMenu->setContentSize(size);
+	}
+}
+
 #endif

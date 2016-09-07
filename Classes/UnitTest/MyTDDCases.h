@@ -13,6 +13,8 @@
 #include "CocosGUITest.h"
 #include "SpriteCreateTest.h"
 #include "SpriteTest.h"
+#include "MainSceneTest.h"
+#include "FlashLightTest.h"
 
 //#include#
 // NOTE!!! The above line is used to generate new unit test, must not be removed.
@@ -24,6 +26,8 @@ TDD_CASES
 	TEST(SpriteCreateTest),
 	TEST(CocosGUITest),
 	TEST(TDD2SampleTest),
+	TEST(MainSceneTest),
+	TEST(FlashLightTest),
 	
 	
 //#testcase#

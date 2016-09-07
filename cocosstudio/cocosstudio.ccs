@@ -13,9 +13,28 @@
         <Folder Name="gui">
           <Project Name="GUITest.csd" Type="Scene" />
           <Project Name="TextureTest.csd" Type="Layer" />
+          <Project Name="MainScene.csd" Type="Scene" />
+          <Project Name="BlendModeTest.csd" Type="Layer" />
         </Folder>
         <Folder Name="image">
+          <Folder Name="game_mech">
+            <Image Name="ball.png" />
+            <Image Name="block.png" />
+            <Image Name="blurred-circle.png" />
+            <Image Name="bullet.png" />
+            <Image Name="explosion.png" />
+            <Image Name="flag.png" />
+            <Image Name="ground.png" />
+            <Image Name="html5.png" />
+            <Image Name="light.png" />
+            <Image Name="monster.png" />
+            <Image Name="player.png" />
+            <Image Name="rocket.png" />
+            <Image Name="ship.png" />
+            <Image Name="smoke.png" />
+          </Folder>
           <Image Name="background.png" />
+          <Image Name="character.png" />
           <Image Name="progress_bg.png" />
           <Image Name="progress_fill.png" />
           <Image Name="simpleTDD-icon.png" />
