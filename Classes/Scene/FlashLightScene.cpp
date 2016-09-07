@@ -53,6 +53,8 @@ bool FlashLightSceneLayer::init()
 	setupCharacters();
 	setupMask();
 	
+	setupTouchListener();
+	
 	return true;
 }
 
@@ -121,4 +123,44 @@ void FlashLightSceneLayer::onEnter()
 	Director::getInstance()->setDisplayStats(true);
 }
 
+
+
+#pragma mark - Touch Handling
+
+void FlashLightSceneLayer::setupTouchListener()
+{
+	auto touchListener = EventListenerTouchOneByOne::create();
+	touchListener->onTouchBegan = CC_CALLBACK_2(FlashLightSceneLayer::onTouchBegan, this);
+	touchListener->onTouchEnded = CC_CALLBACK_2(FlashLightSceneLayer::onTouchEnded, this);
+	touchListener->onTouchMoved = CC_CALLBACK_2(FlashLightSceneLayer::onTouchMoved, this);
+	touchListener->onTouchCancelled = CC_CALLBACK_2(FlashLightSceneLayer::onTouchCancelled, this);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener, this);
+}
+
+bool FlashLightSceneLayer::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
+{
+	return true;
+}
+
+void FlashLightSceneLayer::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event)
+{
+	Vec2 currentPos = touch->getLocation();
+	
+	// Make some offset	// for the big finger
+	currentPos.y += 40;
+
+	setMaskPosition(currentPos);
+	
+	updateMaskPosition();
+}
+
+void FlashLightSceneLayer::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event)
+{
+	//    GameWorld::instance()->activateFeverMode();
+	
+}
+
+void FlashLightSceneLayer::onTouchCancelled(cocos2d::Touch *touch, cocos2d::Event *event)
+{
+}
 

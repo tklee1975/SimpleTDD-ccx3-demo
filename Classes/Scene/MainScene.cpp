@@ -14,6 +14,7 @@
 #include "cocostudio/CocoStudio.h"
 #include "SimpleTDD.h"
 #include "ViewHelper.h"
+#include "FlashLightScene.h"
 
 using namespace cocostudio::timeline;
 
@@ -65,7 +66,8 @@ void MainSceneLayer::setupUI(const std::string &csbName)
 	button = (Button *) mainPanel->getChildByName("mechanic1Button");
 	button->addClickEventListener([&](Ref *) {
 		//TDDManager();
-		SimpleTDD::gotoTest("FlashLightTest");
+		auto scene = FlashLightSceneLayer::createScene();
+		Director::getInstance()->pushScene(scene);
 	});
 //
 //	
