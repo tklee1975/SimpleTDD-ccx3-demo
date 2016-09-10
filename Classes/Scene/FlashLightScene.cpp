@@ -15,6 +15,7 @@
 #include "SimpleTDD.h"
 #include "ViewHelper.h"
 
+
 using namespace cocostudio::timeline;
 
 const Color4B kBgColor = Color4B(0x44, 0x88, 0xcc, 0xff);				//  0x4488cc;
@@ -52,6 +53,8 @@ bool FlashLightSceneLayer::init()
 	
 	setupCharacters();
 	setupMask();
+	setupGUI();
+	
 	
 	setupTouchListener();
 	
@@ -59,10 +62,36 @@ bool FlashLightSceneLayer::init()
 }
 
 
+void FlashLightSceneLayer::setupGUI()
+{
+	Button *button = Button::create();
+	button->setTitleText("back");
+	button->setTitleFontSize(15);
+	button->setPosition(Vec2(300, 50));
+	button->addClickEventListener([&](Ref *) {
+		Director::getInstance()->popScene();
+	});
+	
+	addChild(button);
+}
+
 void FlashLightSceneLayer::setupCharacters()
 {
+	for(int i=0; i<20; i++) {
+		addRandomCharacter();
+	}
+}
+
+void FlashLightSceneLayer::addRandomCharacter()
+{
+	Rect rect = VisibleRect::getVisibleRect();
+	
+	int x = RandomHelper::random_int(rect.getMinX(), rect.getMaxX());
+	int y = RandomHelper::random_int(rect.getMinY(), rect.getMaxY());
+	
+	
 	Sprite *player = Sprite::create("game_mech/player.png");
-	player->setPosition(VisibleRect::center());
+	player->setPosition(Vec2(x ,y));
 	
 	addChild(player);
 }

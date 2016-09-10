@@ -37,9 +37,12 @@ public:
 	virtual void onEnter();
 	
 	void updateMaskPosition();		// update the mask visually
+	void addRandomCharacter();
+	
 protected:
 	void setupCharacters();
 	void setupMask();
+	void setupGUI();
 	Texture2D *getMaskTexture();
 	
 

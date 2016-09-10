@@ -15,6 +15,7 @@
           <Project Name="TextureTest.csd" Type="Layer" />
           <Project Name="MainScene.csd" Type="Scene" />
           <Project Name="BlendModeTest.csd" Type="Layer" />
+          <Project Name="CreditScene.csd" Type="Scene" />
         </Folder>
         <Folder Name="image">
           <Folder Name="game_mech">

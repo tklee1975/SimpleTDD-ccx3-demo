@@ -45,6 +45,7 @@ void FlashLightTest::defineTests()
 	ADD_TEST(testMaskUsingBlend);
 	ADD_TEST(testScene);
 	ADD_TEST(testUpdateMaskPos);
+	ADD_TEST(testAddRandomCharacter);
 }
 
 #pragma mark -
@@ -140,6 +141,18 @@ void FlashLightTest::testUpdateMaskPos()
 	
 	mLayer->setMaskPosition(pos);
 	mLayer->updateMaskPosition();
+}
+
+void FlashLightTest::testAddRandomCharacter()
+{
+	//if(m)
+	//void testAddRandomCharacter();
+	if(mLayer == nullptr) {
+		log("Run testScene first");
+		return;
+	}
+	
+	mLayer->addRandomCharacter();
 }
 
 #endif

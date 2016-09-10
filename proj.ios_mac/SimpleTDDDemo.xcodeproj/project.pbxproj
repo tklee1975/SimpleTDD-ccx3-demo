@@ -57,6 +57,10 @@
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
+		73407B681D807FC400895146 /* SpaceShipScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73407B661D807FC400895146 /* SpaceShipScene.cpp */; };
+		73407B691D807FC400895146 /* SpaceShipScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73407B661D807FC400895146 /* SpaceShipScene.cpp */; };
+		73407B6C1D80812500895146 /* SpaceShipTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73407B6A1D80812500895146 /* SpaceShipTest.cpp */; };
+		73407B6D1D80812500895146 /* SpaceShipTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73407B6A1D80812500895146 /* SpaceShipTest.cpp */; };
 		7371140E1D7F0EB200645431 /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7371140C1D7F0EB200645431 /* MainScene.cpp */; };
 		7371140F1D7F0EB200645431 /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7371140C1D7F0EB200645431 /* MainScene.cpp */; };
 		737114131D7F10B600645431 /* ViewHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 737114111D7F10B600645431 /* ViewHelper.cpp */; };
@@ -89,6 +93,8 @@
 		7384BF4D1D76684800B9A522 /* SpriteCreateTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7384BF4A1D76684800B9A522 /* SpriteCreateTest.cpp */; };
 		7384BF511D7668AF00B9A522 /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7384BF4F1D7668AF00B9A522 /* VisibleRect.cpp */; };
 		7384BF521D7668AF00B9A522 /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7384BF4F1D7668AF00B9A522 /* VisibleRect.cpp */; };
+		738AE5151D832AC000D34144 /* GeometryHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738AE5131D832AC000D34144 /* GeometryHelper.cpp */; };
+		738AE5181D8330AA00D34144 /* GeometryHelperTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738AE5161D8330AA00D34144 /* GeometryHelperTest.cpp */; };
 		738D21611D749D9100DBE855 /* SampleTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738D21341D749D9100DBE855 /* SampleTest.cpp */; };
 		738D21621D749D9100DBE855 /* SampleTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738D21341D749D9100DBE855 /* SampleTest.cpp */; };
 		738D21631D749D9100DBE855 /* SimpleTDD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738D21361D749D9100DBE855 /* SimpleTDD.cpp */; };
@@ -221,6 +227,10 @@
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		73407B661D807FC400895146 /* SpaceShipScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpaceShipScene.cpp; path = Scene/SpaceShipScene.cpp; sourceTree = "<group>"; };
+		73407B671D807FC400895146 /* SpaceShipScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpaceShipScene.h; path = Scene/SpaceShipScene.h; sourceTree = "<group>"; };
+		73407B6A1D80812500895146 /* SpaceShipTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpaceShipTest.cpp; sourceTree = "<group>"; };
+		73407B6B1D80812500895146 /* SpaceShipTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceShipTest.h; sourceTree = "<group>"; };
 		7371140C1D7F0EB200645431 /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainScene.cpp; path = Scene/MainScene.cpp; sourceTree = "<group>"; };
 		7371140D1D7F0EB200645431 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = Scene/MainScene.h; sourceTree = "<group>"; };
 		737114111D7F10B600645431 /* ViewHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ViewHelper.cpp; sourceTree = "<group>"; };
@@ -246,6 +256,10 @@
 		7384BF4B1D76684800B9A522 /* SpriteCreateTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteCreateTest.h; sourceTree = "<group>"; };
 		7384BF4F1D7668AF00B9A522 /* VisibleRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VisibleRect.cpp; path = Common/VisibleRect.cpp; sourceTree = "<group>"; };
 		7384BF501D7668AF00B9A522 /* VisibleRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VisibleRect.h; path = Common/VisibleRect.h; sourceTree = "<group>"; };
+		738AE5131D832AC000D34144 /* GeometryHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GeometryHelper.cpp; sourceTree = "<group>"; };
+		738AE5141D832AC000D34144 /* GeometryHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeometryHelper.h; sourceTree = "<group>"; };
+		738AE5161D8330AA00D34144 /* GeometryHelperTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GeometryHelperTest.cpp; sourceTree = "<group>"; };
+		738AE5171D8330AA00D34144 /* GeometryHelperTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeometryHelperTest.h; sourceTree = "<group>"; };
 		738D21341D749D9100DBE855 /* SampleTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SampleTest.cpp; sourceTree = "<group>"; };
 		738D21351D749D9100DBE855 /* SampleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleTest.h; sourceTree = "<group>"; };
 		738D21361D749D9100DBE855 /* SimpleTDD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleTDD.cpp; sourceTree = "<group>"; };
@@ -512,6 +526,8 @@
 				7371140D1D7F0EB200645431 /* MainScene.h */,
 				7371141D1D7FA51100645431 /* FlashLightScene.cpp */,
 				7371141E1D7FA51100645431 /* FlashLightScene.h */,
+				73407B661D807FC400895146 /* SpaceShipScene.cpp */,
+				73407B671D807FC400895146 /* SpaceShipScene.h */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -519,6 +535,8 @@
 		737114101D7F10B600645431 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				738AE5131D832AC000D34144 /* GeometryHelper.cpp */,
+				738AE5141D832AC000D34144 /* GeometryHelper.h */,
 				737114111D7F10B600645431 /* ViewHelper.cpp */,
 				737114121D7F10B600645431 /* ViewHelper.h */,
 			);
@@ -595,6 +613,10 @@
 		738D215F1D749D9100DBE855 /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
+				738AE5161D8330AA00D34144 /* GeometryHelperTest.cpp */,
+				738AE5171D8330AA00D34144 /* GeometryHelperTest.h */,
+				73407B6A1D80812500895146 /* SpaceShipTest.cpp */,
+				73407B6B1D80812500895146 /* SpaceShipTest.h */,
 				737114191D7F13FB00645431 /* FlashLightTest.cpp */,
 				7371141A1D7F13FB00645431 /* FlashLightTest.h */,
 				737114151D7F11D800645431 /* MainSceneTest.cpp */,
@@ -763,6 +785,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7371140E1D7F0EB200645431 /* MainScene.cpp in Sources */,
+				73407B681D807FC400895146 /* SpaceShipScene.cpp in Sources */,
 				7371141F1D7FA51100645431 /* FlashLightScene.cpp in Sources */,
 				738D217B1D749D9100DBE855 /* TDDSwitch.cpp in Sources */,
 				7384BF301D7660DD00B9A522 /* CocosGUITest.cpp in Sources */,
@@ -782,7 +805,9 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				7384BF471D7665EF00B9A522 /* TODO.md in Sources */,
 				738D21851D749D9100DBE855 /* TDDTopBar.cpp in Sources */,
+				738AE5151D832AC000D34144 /* GeometryHelper.cpp in Sources */,
 				738D217D1D749D9100DBE855 /* TDDTab.cpp in Sources */,
+				73407B6C1D80812500895146 /* SpaceShipTest.cpp in Sources */,
 				738D21711D749D9100DBE855 /* TDDMenu.cpp in Sources */,
 				738D21771D749D9100DBE855 /* TDDSubMenu.cpp in Sources */,
 				738D21791D749D9100DBE855 /* TDDSuite.cpp in Sources */,
@@ -792,6 +817,7 @@
 				738D21811D749D9100DBE855 /* TDDTest.cpp in Sources */,
 				738D21671D749D9100DBE855 /* TDDBaseTest.cpp in Sources */,
 				737114131D7F10B600645431 /* ViewHelper.cpp in Sources */,
+				738AE5181D8330AA00D34144 /* GeometryHelperTest.cpp in Sources */,
 				738D21751D749D9100DBE855 /* TDDSample.cpp in Sources */,
 				738D21631D749D9100DBE855 /* SimpleTDD.cpp in Sources */,
 				738D21831D749D9100DBE855 /* TDDTestMenu.cpp in Sources */,
@@ -821,8 +847,10 @@
 				738D21621D749D9100DBE855 /* SampleTest.cpp in Sources */,
 				737114141D7F10B600645431 /* ViewHelper.cpp in Sources */,
 				7384BF481D7665EF00B9A522 /* TODO.md in Sources */,
+				73407B691D807FC400895146 /* SpaceShipScene.cpp in Sources */,
 				738D216A1D749D9100DBE855 /* TDDData.cpp in Sources */,
 				738D21701D749D9100DBE855 /* TDDManager.cpp in Sources */,
+				73407B6D1D80812500895146 /* SpaceShipTest.cpp in Sources */,
 				7384BF521D7668AF00B9A522 /* VisibleRect.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				7371141C1D7F13FB00645431 /* FlashLightTest.cpp in Sources */,
