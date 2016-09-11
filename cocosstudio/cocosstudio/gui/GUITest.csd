@@ -4,9 +4,9 @@
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Scene" Tag="49" ctype="GameNodeObjectData">
-        <Size X="320.0000" Y="568.0000" />
+        <Size X="568.0000" Y="320.0000" />
         <Children>
-          <AbstractNodeData Name="bgPanel" ActionTag="-666526917" Tag="51" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="0.0000" RightMargin="0.0000" TouchEnable="True" ClipAble="False" ComboBoxIndex="2" ColorAngle="270.0000" ctype="PanelObjectData">
+          <AbstractNodeData Name="bgPanel" ActionTag="-666526917" Tag="51" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" ComboBoxIndex="2" ColorAngle="270.0000" ctype="PanelObjectData">
             <Size X="320.0000" Y="568.0000" />
             <Children>
               <AbstractNodeData Name="Image_2" ActionTag="-1932052675" Tag="70" IconVisible="False" LeftMargin="-90.1630" RightMargin="-101.8370" TopMargin="204.4035" BottomMargin="-148.4035" LeftEage="168" RightEage="168" TopEage="168" BottomEage="168" Scale9OriginX="168" Scale9OriginY="168" Scale9Width="176" Scale9Height="176" ctype="ImageViewObjectData">
@@ -21,15 +21,15 @@
               </AbstractNodeData>
             </Children>
             <AnchorPoint />
-            <Position X="0.0000" />
+            <Position />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.0000" />
+            <PrePosition />
             <PreSize X="1.0000" Y="1.0000" />
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="51" G="51" B="120" />
             <EndColor A="255" R="63" G="126" B="187" />
-            <ColorVector ScaleX="0.0000" ScaleY="-1.0000" />
+            <ColorVector ScaleY="-1.0000" />
           </AbstractNodeData>
           <AbstractNodeData Name="caption1" ActionTag="1150141928" Tag="65" IconVisible="False" LeftMargin="25.2040" RightMargin="160.7960" TopMargin="392.5038" BottomMargin="140.4962" FontSize="30" LabelText="TextField" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="134.0000" Y="35.0000" />

@@ -15,6 +15,8 @@
 #include "SimpleTDD.h"
 #include "ViewHelper.h"
 #include "FlashLightScene.h"
+#include "SpaceShipScene.h"
+#include "CreditScene.h"
 
 using namespace cocostudio::timeline;
 
@@ -59,16 +61,31 @@ void MainSceneLayer::setupUI(const std::string &csbName)
 	FIX_UI_LAYOUT(rootNode);
 	
 	Node *mainPanel = (Node *) rootNode->getChildByName("mainPanel");
+	Node *buttonPanel = (Node *) mainPanel->getChildByName("buttonPanel");
 //	
 //	
 	Button *button;
  
-	button = (Button *) mainPanel->getChildByName("mechanic1Button");
+	button = (Button *) buttonPanel->getChildByName("mechanic1Button");
 	button->addClickEventListener([&](Ref *) {
 		//TDDManager();
 		auto scene = FlashLightSceneLayer::createScene();
 		Director::getInstance()->pushScene(scene);
 	});
+	
+	button = (Button *) buttonPanel->getChildByName("mechanic2Button");
+	button->addClickEventListener([&](Ref *) {
+		//TDDManager();
+		auto scene = SpaceShipSceneLayer::createScene();
+		Director::getInstance()->pushScene(scene);
+	});
+	
+	button = (Button *) buttonPanel->getChildByName("creditButton");
+	button->addClickEventListener([&](Ref *) {
+		auto scene = CreditSceneLayer::createScene();
+		Director::getInstance()->pushScene(scene);
+	});
+
 //
 //	
 //	button = (Button *) mainPanel->getChildByName("gameDataButton");

@@ -95,6 +95,8 @@
 		7384BF521D7668AF00B9A522 /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7384BF4F1D7668AF00B9A522 /* VisibleRect.cpp */; };
 		738AE5151D832AC000D34144 /* GeometryHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738AE5131D832AC000D34144 /* GeometryHelper.cpp */; };
 		738AE5181D8330AA00D34144 /* GeometryHelperTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738AE5161D8330AA00D34144 /* GeometryHelperTest.cpp */; };
+		738AE51B1D85AADE00D34144 /* CreditScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738AE5191D85AADE00D34144 /* CreditScene.cpp */; };
+		738AE51C1D85AADE00D34144 /* CreditScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738AE5191D85AADE00D34144 /* CreditScene.cpp */; };
 		738D21611D749D9100DBE855 /* SampleTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738D21341D749D9100DBE855 /* SampleTest.cpp */; };
 		738D21621D749D9100DBE855 /* SampleTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738D21341D749D9100DBE855 /* SampleTest.cpp */; };
 		738D21631D749D9100DBE855 /* SimpleTDD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738D21361D749D9100DBE855 /* SimpleTDD.cpp */; };
@@ -260,6 +262,8 @@
 		738AE5141D832AC000D34144 /* GeometryHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeometryHelper.h; sourceTree = "<group>"; };
 		738AE5161D8330AA00D34144 /* GeometryHelperTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GeometryHelperTest.cpp; sourceTree = "<group>"; };
 		738AE5171D8330AA00D34144 /* GeometryHelperTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeometryHelperTest.h; sourceTree = "<group>"; };
+		738AE5191D85AADE00D34144 /* CreditScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreditScene.cpp; path = Scene/CreditScene.cpp; sourceTree = "<group>"; };
+		738AE51A1D85AADE00D34144 /* CreditScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreditScene.h; path = Scene/CreditScene.h; sourceTree = "<group>"; };
 		738D21341D749D9100DBE855 /* SampleTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SampleTest.cpp; sourceTree = "<group>"; };
 		738D21351D749D9100DBE855 /* SampleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleTest.h; sourceTree = "<group>"; };
 		738D21361D749D9100DBE855 /* SimpleTDD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleTDD.cpp; sourceTree = "<group>"; };
@@ -528,6 +532,8 @@
 				7371141E1D7FA51100645431 /* FlashLightScene.h */,
 				73407B661D807FC400895146 /* SpaceShipScene.cpp */,
 				73407B671D807FC400895146 /* SpaceShipScene.h */,
+				738AE5191D85AADE00D34144 /* CreditScene.cpp */,
+				738AE51A1D85AADE00D34144 /* CreditScene.h */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -793,6 +799,7 @@
 				738D216B1D749D9100DBE855 /* TDDHelper.cpp in Sources */,
 				7384BF4C1D76684800B9A522 /* SpriteCreateTest.cpp in Sources */,
 				7384BF441D7663C200B9A522 /* README.md in Sources */,
+				738AE51B1D85AADE00D34144 /* CreditScene.cpp in Sources */,
 				7371141B1D7F13FB00645431 /* FlashLightTest.cpp in Sources */,
 				73A8C3C51D787D4F004C1DCB /* SpriteTest.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
@@ -843,6 +850,7 @@
 				7384BF451D7663C200B9A522 /* README.md in Sources */,
 				738D217A1D749D9100DBE855 /* TDDSuite.cpp in Sources */,
 				7384BF4D1D76684800B9A522 /* SpriteCreateTest.cpp in Sources */,
+				738AE51C1D85AADE00D34144 /* CreditScene.cpp in Sources */,
 				738D21781D749D9100DBE855 /* TDDSubMenu.cpp in Sources */,
 				738D21621D749D9100DBE855 /* SampleTest.cpp in Sources */,
 				737114141D7F10B600645431 /* ViewHelper.cpp in Sources */,

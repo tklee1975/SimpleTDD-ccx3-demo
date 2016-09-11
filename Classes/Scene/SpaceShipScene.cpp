@@ -41,7 +41,7 @@ SpaceShipSceneLayer::SpaceShipSceneLayer()
 : mShipSprite(nullptr)
 , mCurrentAccel(0)
 , mAcceleration(50)
-, mDeceleration(-50)
+, mDeceleration(-30)
 , mSpeed(0)
 , mMaxSpeed(100)
 , mActive(false)
@@ -94,6 +94,7 @@ void SpaceShipSceneLayer::setupCharacter()
 
 	Sprite *sprite = Sprite::create();
 	sprite->setPosition(VisibleRect::center());
+	sprite->setScale(0.5f);
 	addChild(sprite);
 	
 	mShipSprite = sprite;
@@ -218,6 +219,14 @@ void SpaceShipSceneLayer::updatePosition(float delta)
 	speedVec.y *= -1;	// fix anti clockwise issue
 	
 	Vec2 pos = mShipSprite->getPosition() + speedVec * delta;
+	
+	Size size = getContentSize();
+	
+	if (pos.x > size.width)  { pos.x = 0; }
+	if (pos.x < 0)			 { pos.x = size.width; }
+	if (pos.y > size.height) { pos.y = 0; }
+	if (pos.y < 0)			 { pos.y = size.height; }
+
 	
 	mShipSprite->setPosition(pos);
 }

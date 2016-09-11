@@ -136,23 +136,27 @@ void SpriteTest::testFrameAnimation()
 
 void SpriteTest::testSequenceAnimation()
 {
-	auto texture = Director::getInstance()->getTextureCache()->addImage("spritesheet/girl.png");
+	auto texture = Director::getInstance()->getTextureCache()->addImage("spritesheet/character.png");
 	
 	// define the frames
-	float frameW = 24; float frameH = 46;
-	auto frame0 = SpriteFrame::createWithTexture(texture, Rect(frameW*0, frameH*0, frameW, frameH));
-	auto frame1 = SpriteFrame::createWithTexture(texture, Rect(frameW*2, frameH*0, frameW, frameH));
+	float frameW = 64; float frameH = 64;
+	int numFrame = 9;
+	Vector<SpriteFrame *> frameList;
+	for(int i=0; i<numFrame; i++) {
+		auto frame = SpriteFrame::createWithTexture(texture, Rect(frameW*i, frameH*10, frameW, frameH));
+		frameList.pushBack(frame);
+	}
 	
 	// define the sprite
-	auto sprite = Sprite::createWithSpriteFrame(frame0);
+	auto sprite = Sprite::createWithSpriteFrame(frameList.at(0));
 	sprite->setPosition(VisibleRect::center());
 	addChild(sprite);
 	
 	// make the animation
-	Vector<SpriteFrame*> animFrames(2);
-	animFrames.pushBack(frame0);
-	animFrames.pushBack(frame1);
-	auto animation = Animation::createWithSpriteFrames(animFrames, 0.3f);
+//	Vector<SpriteFrame*> animFrames(numFrame);
+//	animFrames.pushBack(frame0);
+//	animFrames.pushBack(frame1);
+	auto animation = Animation::createWithSpriteFrames(frameList, 0.1f);
 	auto animate = Animate::create(animation);
 	
 	

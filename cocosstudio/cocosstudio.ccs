@@ -11,11 +11,11 @@
           <Fnt Name="digit.fnt" />
         </Folder>
         <Folder Name="gui">
-          <Project Name="GUITest.csd" Type="Scene" />
-          <Project Name="TextureTest.csd" Type="Layer" />
-          <Project Name="MainScene.csd" Type="Scene" />
           <Project Name="BlendModeTest.csd" Type="Layer" />
           <Project Name="CreditScene.csd" Type="Scene" />
+          <Project Name="GUITest.csd" Type="Scene" />
+          <Project Name="MainScene.csd" Type="Scene" />
+          <Project Name="TextureTest.csd" Type="Layer" />
         </Folder>
         <Folder Name="image">
           <Folder Name="game_mech">
