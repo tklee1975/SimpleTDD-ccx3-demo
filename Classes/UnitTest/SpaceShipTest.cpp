@@ -15,7 +15,11 @@ void SpaceShipTest::setUp()
 	mLayer = nullptr;
 	
 	setupTouchListener();
+	
+	testSample();
+	setMenuVisible(false);
 }
+
 
 
 void SpaceShipTest::tearDown()
