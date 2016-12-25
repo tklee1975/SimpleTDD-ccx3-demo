@@ -34,12 +34,14 @@ Step 1: Prepare the firework particle
 	- Using Additive blend instead
 - Export the particle and test it in the CocosStudio
 
+Expect output: the particle files (particle.list and particle.png) are ready to use.
+
 Step 2: Create a custom view in CocosStudio
 -------------------------------
 The second step is making a view contain several "firework" particle that we need 
 in the next step. You can use the firework particle made in step1 or from somewhere else;
 
-- Create a custom view (Layer) called "FireworkView" in CocosStudio	
+- Create a custom view (Layer) called "FireworkView" in CocosStudio under '/gui/' folder	
 	- Size: 320 x 600	// Size can be vared if you like
 - Add the first particle
 	- Add a particle to your view
@@ -49,6 +51,17 @@ in the next step. You can use the firework particle made in step1 or from somewh
 	- Rename them as "firework2", "firework3", .. "firework5"
 	- Place them evenly in the screen
 	- note: you can more if you like 
+- Publish the file
+- Make sure the particles and gui are imported to XCode
+
+Expect output: The csb file of firework particles is ready to use. 
+
+Step 3: Create the FireworkView 
+-------------------------------
+This step is simply create the FireworkView with the FireworkView.csb loaded
+
+- Create the FireworkView class inherit from ui::Layout (.h & c++)
+- 
 - 
 
 

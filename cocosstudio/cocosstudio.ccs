@@ -16,7 +16,7 @@
           <Project Name="GUITest.csd" Type="Scene" />
           <Project Name="MainScene.csd" Type="Scene" />
           <Project Name="TextureTest.csd" Type="Layer" />
-          <Project Name="FireworkLayer.csd" Type="Layer" />
+          <Project Name="FireworkView.csd" Type="Layer" />
         </Folder>
         <Folder Name="image">
           <Folder Name="game_mech">

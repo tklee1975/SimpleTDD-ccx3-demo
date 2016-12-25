@@ -70,6 +70,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	FileUtils::getInstance()->addSearchPath("spritesheet");
 	FileUtils::getInstance()->addSearchPath("Default");
 	FileUtils::getInstance()->addSearchPath("image");
+	FileUtils::getInstance()->addSearchPath("particles");
 	
     // create a scene. it's an autorelease object
     auto scene = MainSceneLayer::createScene();

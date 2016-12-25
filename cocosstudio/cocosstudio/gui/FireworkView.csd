@@ -4,59 +4,59 @@
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Layer" Tag="53" ctype="GameLayerObjectData">
-        <Size X="320.0000" Y="600.0000" />
+        <Size X="568.0000" Y="320.0000" />
         <Children>
-          <AbstractNodeData Name="firework1" ActionTag="-581558164" Tag="55" IconVisible="True" LeftMargin="120.0002" RightMargin="199.9998" TopMargin="165.0000" BottomMargin="435.0000" ctype="ParticleObjectData">
+          <AbstractNodeData Name="firework1" ActionTag="-581558164" Tag="55" IconVisible="True" LeftMargin="96.2503" RightMargin="471.7497" TopMargin="63.7498" BottomMargin="256.2502" ctype="ParticleObjectData">
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
-            <Position X="120.0002" Y="435.0000" />
-            <Scale ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="96.2503" Y="256.2502" />
+            <Scale ScaleX="0.7000" ScaleY="0.7000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.3750" Y="0.7250" />
+            <PrePosition X="0.1695" Y="0.8008" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="particles/firework.plist" Plist="" />
             <BlendFunc Src="770" Dst="1" />
           </AbstractNodeData>
-          <AbstractNodeData Name="firework2" ActionTag="-1246677582" Tag="56" IconVisible="True" LeftMargin="157.5001" RightMargin="162.4999" TopMargin="451.2499" BottomMargin="148.7501" ctype="ParticleObjectData">
+          <AbstractNodeData Name="firework2" ActionTag="-1246677582" Tag="56" IconVisible="True" LeftMargin="307.5003" RightMargin="260.4997" TopMargin="83.7499" BottomMargin="236.2501" ctype="ParticleObjectData">
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
-            <Position X="157.5001" Y="148.7501" />
-            <Scale ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="307.5003" Y="236.2501" />
+            <Scale ScaleX="0.7000" ScaleY="0.7000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.4922" Y="0.2479" />
+            <PrePosition X="0.5414" Y="0.7383" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="particles/firework.plist" Plist="" />
             <BlendFunc Src="770" Dst="1" />
           </AbstractNodeData>
-          <AbstractNodeData Name="firework3" ActionTag="-847212591" Tag="57" IconVisible="True" LeftMargin="250.0004" RightMargin="69.9996" TopMargin="353.7499" BottomMargin="246.2501" ctype="ParticleObjectData">
+          <AbstractNodeData Name="firework3" ActionTag="-847212591" Tag="57" IconVisible="True" LeftMargin="368.7506" RightMargin="199.2494" TopMargin="171.2498" BottomMargin="148.7502" ctype="ParticleObjectData">
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
-            <Position X="250.0004" Y="246.2501" />
-            <Scale ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="368.7506" Y="148.7502" />
+            <Scale ScaleX="0.7000" ScaleY="0.7000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.7813" Y="0.4104" />
+            <PrePosition X="0.6492" Y="0.4648" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="particles/firework.plist" Plist="" />
             <BlendFunc Src="770" Dst="1" />
           </AbstractNodeData>
-          <AbstractNodeData Name="firework4" ActionTag="-880165242" Tag="58" IconVisible="True" LeftMargin="76.2500" RightMargin="243.7500" TopMargin="320.0000" BottomMargin="280.0000" ctype="ParticleObjectData">
+          <AbstractNodeData Name="firework4" ActionTag="-880165242" Tag="58" IconVisible="True" LeftMargin="183.7500" RightMargin="384.2500" TopMargin="210.9998" BottomMargin="109.0002" ctype="ParticleObjectData">
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
-            <Position X="76.2500" Y="280.0000" />
-            <Scale ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="183.7500" Y="109.0002" />
+            <Scale ScaleX="0.7000" ScaleY="0.7000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.2383" Y="0.4667" />
+            <PrePosition X="0.3235" Y="0.3406" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="particles/firework.plist" Plist="" />
             <BlendFunc Src="770" Dst="1" />
           </AbstractNodeData>
-          <AbstractNodeData Name="firework5" ActionTag="-1099199364" Tag="59" IconVisible="True" LeftMargin="250.0001" RightMargin="69.9999" TopMargin="205.0000" BottomMargin="395.0000" ctype="ParticleObjectData">
+          <AbstractNodeData Name="firework5" ActionTag="-1099199364" Tag="59" IconVisible="True" LeftMargin="445.0006" RightMargin="122.9994" TopMargin="82.4999" BottomMargin="237.5001" ctype="ParticleObjectData">
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
-            <Position X="250.0001" Y="395.0000" />
-            <Scale ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="445.0006" Y="237.5001" />
+            <Scale ScaleX="0.7000" ScaleY="0.7000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.7813" Y="0.6583" />
+            <PrePosition X="0.7835" Y="0.7422" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="particles/firework.plist" Plist="" />
             <BlendFunc Src="770" Dst="1" />

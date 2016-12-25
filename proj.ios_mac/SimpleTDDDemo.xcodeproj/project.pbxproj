@@ -136,6 +136,9 @@
 		738D21851D749D9100DBE855 /* TDDTopBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738D215C1D749D9100DBE855 /* TDDTopBar.cpp */; };
 		738D21861D749D9100DBE855 /* TDDTopBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 738D215C1D749D9100DBE855 /* TDDTopBar.cpp */; };
 		73A8C3C51D787D4F004C1DCB /* SpriteTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73A8C3C31D787D4F004C1DCB /* SpriteTest.cpp */; };
+		73B4894F1E103BA90028B4EC /* FireworkView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73B4894D1E103BA90028B4EC /* FireworkView.cpp */; };
+		73B489531E103E5D0028B4EC /* FireworkViewTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73B489511E103E5D0028B4EC /* FireworkViewTest.cpp */; };
+		73B489551E10507F0028B4EC /* particles in Resources */ = {isa = PBXBuildFile; fileRef = 73B489541E10507F0028B4EC /* particles */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -311,6 +314,11 @@
 		73A8C3C31D787D4F004C1DCB /* SpriteTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteTest.cpp; sourceTree = "<group>"; };
 		73A8C3C41D787D4F004C1DCB /* SpriteTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteTest.h; sourceTree = "<group>"; };
 		73B4894C1E101C8E0028B4EC /* MakeFirework.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = MakeFirework.md; path = ../doc/MakeFirework/MakeFirework.md; sourceTree = "<group>"; };
+		73B4894D1E103BA90028B4EC /* FireworkView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FireworkView.cpp; path = View/FireworkView.cpp; sourceTree = "<group>"; };
+		73B4894E1E103BA90028B4EC /* FireworkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FireworkView.h; path = View/FireworkView.h; sourceTree = "<group>"; };
+		73B489511E103E5D0028B4EC /* FireworkViewTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FireworkViewTest.cpp; sourceTree = "<group>"; };
+		73B489521E103E5D0028B4EC /* FireworkViewTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireworkViewTest.h; sourceTree = "<group>"; };
+		73B489541E10507F0028B4EC /* particles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = particles; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -444,6 +452,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				73B489541E10507F0028B4EC /* particles */,
 				7384BF401D76615B00B9A522 /* Default */,
 				7384BF3D1D76614200B9A522 /* animation */,
 				7384BF311D76613500B9A522 /* font */,
@@ -463,6 +472,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				73B489501E103BB40028B4EC /* View */,
 				737114101D7F10B600645431 /* Helper */,
 				7371140B1D7F0E7A00645431 /* Scene */,
 				7384BF4E1D76686500B9A522 /* Common */,
@@ -621,6 +631,8 @@
 		738D215F1D749D9100DBE855 /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
+				73B489511E103E5D0028B4EC /* FireworkViewTest.cpp */,
+				73B489521E103E5D0028B4EC /* FireworkViewTest.h */,
 				738AE5161D8330AA00D34144 /* GeometryHelperTest.cpp */,
 				738AE5171D8330AA00D34144 /* GeometryHelperTest.h */,
 				73407B6A1D80812500895146 /* SpaceShipTest.cpp */,
@@ -638,6 +650,15 @@
 				738D21601D749D9100DBE855 /* MyTDDCases.h */,
 			);
 			path = UnitTest;
+			sourceTree = "<group>";
+		};
+		73B489501E103BB40028B4EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				73B4894D1E103BA90028B4EC /* FireworkView.cpp */,
+				73B4894E1E103BA90028B4EC /* FireworkView.h */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -755,6 +776,7 @@
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
+				73B489551E10507F0028B4EC /* particles in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
@@ -797,6 +819,7 @@
 				7371141F1D7FA51100645431 /* FlashLightScene.cpp in Sources */,
 				738D217B1D749D9100DBE855 /* TDDSwitch.cpp in Sources */,
 				7384BF301D7660DD00B9A522 /* CocosGUITest.cpp in Sources */,
+				73B489531E103E5D0028B4EC /* FireworkViewTest.cpp in Sources */,
 				738D21691D749D9100DBE855 /* TDDData.cpp in Sources */,
 				738D216B1D749D9100DBE855 /* TDDHelper.cpp in Sources */,
 				7384BF4C1D76684800B9A522 /* SpriteCreateTest.cpp in Sources */,
@@ -832,6 +855,7 @@
 				738D21831D749D9100DBE855 /* TDDTestMenu.cpp in Sources */,
 				738D21731D749D9100DBE855 /* TDDMenuTest.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				73B4894F1E103BA90028B4EC /* FireworkView.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,7 @@
 #include "MainSceneTest.h"
 #include "FlashLightTest.h"
 #include "SpaceShipTest.h"
+#include "FireworkViewTest.h"
 
 //#include#
 // NOTE!!! The above line is used to generate new unit test, must not be removed.
@@ -24,6 +25,7 @@
 TDD_CASES
 {
 	TEST(SpriteTest),
+	TEST(FireworkViewTest),
 	TEST(SpaceShipTest),
 	TEST(SpriteCreateTest),
 	TEST(CocosGUITest),
