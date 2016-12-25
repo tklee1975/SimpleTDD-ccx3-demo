@@ -310,6 +310,7 @@
 		738D21601D749D9100DBE855 /* MyTDDCases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTDDCases.h; sourceTree = "<group>"; };
 		73A8C3C31D787D4F004C1DCB /* SpriteTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteTest.cpp; sourceTree = "<group>"; };
 		73A8C3C41D787D4F004C1DCB /* SpriteTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteTest.h; sourceTree = "<group>"; };
+		73B4894C1E101C8E0028B4EC /* MakeFirework.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = MakeFirework.md; path = ../doc/MakeFirework/MakeFirework.md; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -553,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				7384BF461D7665EE00B9A522 /* TODO.md */,
+				73B4894C1E101C8E0028B4EC /* MakeFirework.md */,
 			);
 			name = doc;
 			sourceTree = "<group>";

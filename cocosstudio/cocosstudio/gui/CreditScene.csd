@@ -4,7 +4,7 @@
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Scene" Tag="113" ctype="GameNodeObjectData">
-        <Size X="568.0000" Y="320.0000" />
+        <Size X="320.0000" Y="568.0000" />
         <Children>
           <AbstractNodeData Name="Panel_2" ActionTag="-1121904281" Tag="32" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
             <Size X="568.0000" Y="320.0000" />

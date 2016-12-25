@@ -1,18 +1,5 @@
 <UserData Version="3.10.0.0">
   <Properties>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="gui/GUITest.csd" />
-          <FilePathData Path="animation/plane.csd" />
-          <FilePathData Path="gui/TextureTest.csd" />
-          <FilePathData Path="gui/MainScene.csd" />
-          <FilePathData Path="gui/BlendModeTest.csd" />
-          <FilePathData Path="gui/CreditScene.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="gui/GUITest.csd" />
-      </Value>
-    </Item>
     <Item Key="CocosRecentOperation">
       <Value ctype="CocosRecentOperation">
         <LastPublishType Value="Resource" />

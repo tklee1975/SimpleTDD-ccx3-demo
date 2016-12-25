@@ -16,6 +16,7 @@
           <Project Name="GUITest.csd" Type="Scene" />
           <Project Name="MainScene.csd" Type="Scene" />
           <Project Name="TextureTest.csd" Type="Layer" />
+          <Project Name="FireworkLayer.csd" Type="Layer" />
         </Folder>
         <Folder Name="image">
           <Folder Name="game_mech">
@@ -39,6 +40,10 @@
           <Image Name="progress_bg.png" />
           <Image Name="progress_fill.png" />
           <Image Name="simpleTDD-icon.png" />
+        </Folder>
+        <Folder Name="particles">
+          <PlistParticleFile Name="firework.plist" />
+          <PlistParticleFile Name="firework_forever.plist" />
         </Folder>
         <Folder Name="spritesheet">
           <PlistImageFolder Image="game.png" PListFile="game.plist" Name=".game_PList.Dir">
@@ -88,6 +93,9 @@
             <PlistImageFile Name="textGetReady.png" Key="textGetReady.png" />
             <PlistImageFile Name="UIbg.png" Key="UIbg.png" />
           </PlistImageFolder>
+        </Folder>
+        <Folder Name="test">
+          <Project Name="TestParticle.csd" Type="Scene" />
         </Folder>
       </RootFolder>
     </Group>
