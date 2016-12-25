@@ -38,7 +38,5 @@ void FireworkView::setupCsb(const std::string &csbName)
 	addChild(rootNode);
 	
 	setContentSize(rootNode->getContentSize());		// update the layout size based on the CSB size
-	
-	
 }
 

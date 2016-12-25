@@ -7,7 +7,6 @@
 #include "FireworkViewTest.h"
 #include "TDDHelper.h"
 #include "FireworkView.h"
-#include "VisibleRect.h"
 
 void FireworkViewTest::setUp()
 {
@@ -44,10 +43,9 @@ void FireworkViewTest::defineTests()
 #pragma mark Sub Test Definition
 void FireworkViewTest::testCreate()
 {
-	log("this is a sample subTest");
 	FireworkView *view = FireworkView::create();
 	view->setAnchorPoint(Vec2(0.5, 0.5f));
-	view->setPosition(VisibleRect::center());
+	view->setPosition(Vec2(250, 160));
 	
 	addChild(view);
 	

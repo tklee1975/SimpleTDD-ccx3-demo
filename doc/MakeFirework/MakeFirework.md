@@ -23,8 +23,13 @@ Therefore the components should serves the following functions:
 - Play a specific firework emitter
 - Logic to tell the firework emitter play the "firework"
 
+Project
+-----------------
+github: 
+//step 1 & 2: tag=
 
-Step 1: Prepare the firework particle
+
+Setup #1: Prepare the firework particle
 -------------------------------
 - Go to http://particle2dx.com/ an online free particle maker
 - Go to the template and select "fw1" in the "Firework" section
@@ -36,7 +41,7 @@ Step 1: Prepare the firework particle
 
 Expect output: the particle files (particle.list and particle.png) are ready to use.
 
-Step 2: Create a custom view in CocosStudio
+Setup #2: Create a custom view in CocosStudio
 -------------------------------
 The second step is making a view contain several "firework" particle that we need 
 in the next step. You can use the firework particle made in step1 or from somewhere else;
@@ -54,17 +59,68 @@ in the next step. You can use the firework particle made in step1 or from somewh
 - Publish the file
 - Make sure the particles and gui are imported to XCode
 
-Expect output: The csb file of firework particles is ready to use. 
+Expect output: 
+- The csb file of firework particles is ready to use.
+- The particles are ready to use.
 
-Step 3: Create the FireworkView 
+Step 1: Create the FireworkView 
 -------------------------------
 This step is simply create the FireworkView with the FireworkView.csb loaded
 
 - Create the FireworkView class inherit from ui::Layout (.h & c++)
-- 
-- 
+- Create setupCsb method with following code:
+		void FireworkView::setupCsb(const std::string &csbName)
+		{
+			Node *rootNode = CSLoader::createNode(csbName);
+			addChild(rootNode);
+
+			setContentSize(rootNode->getContentSize());		// update the layout size based on the CSB size
+		}
+- Call the setupCsb in init like this:
+	bool FireworkView::init()
+	{
+		if(Layout::init() == false) {
+			return false;
+		}
+
+		std::string csb = "gui/FireworkView.csb";
+		setupCsb(csb);
 
 
+		return true;
+	}
+- Assume the FireworkView is good to test now!
 
+Step 2: Create the Unit Test FireworkViewTest 
+-------------------------------
+This step is to create an unit test to the FireworkView
 
-	 
+- Go to to project folder 
+- run ./script/createTest.sh FireworkView
+	- when success, an unit test called 'FireworkViewTest' in '/Classes/UnitTest' folder
+- Add "FireworkViewTest.cpp" and "FireworkViewTest.h" to the project
+- Change testSample in FireworkViewTest to testCreate and add the following source
+	void FireworkViewTest::testCreate()
+	{
+		FireworkView *view = FireworkView::create();
+		view->setAnchorPoint(Vec2(0.5, 0.5f));
+		view->setPosition(Vec2(250, 160));
+
+		addChild(view);
+
+	}
+- Modiy "MyTDDCases.h" and "FireworkViewTest" to it like this
+	#include "FireworkViewTest.h"
+
+	TDD_CASES
+	{
+		TEST(FireworkViewTest),
+		... 
+
+- Run the Test (Main Screen -> Click "simpleTDD" -> Click "FireworkViewTest" -> Click "testCreate")
+
+Expected: You will the five particle fire at the same time.
+What's next? 
+- We are not expect the particles fire at the same time. 
+- And we need to bind the Particle in code and control them.
+
