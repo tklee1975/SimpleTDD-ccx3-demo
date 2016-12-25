@@ -30,6 +30,7 @@ public:
 	void setupCsb(const std::string &csbFile);
 	
 private:
+	Vector<ParticleSystemQuad *> mEmitterList;
 };
 
 

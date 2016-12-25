@@ -119,8 +119,51 @@ This step is to create an unit test to the FireworkView
 
 - Run the Test (Main Screen -> Click "simpleTDD" -> Click "FireworkViewTest" -> Click "testCreate")
 
-Expected: You will the five particle fire at the same time.
+Expected: 
+- You will the five particle fire at the same time.
+
 What's next? 
 - We are not expect the particles fire at the same time. 
 - And we need to bind the Particle in code and control them.
+
+
+Step 3: Setup the Emitter array  
+-------------------------------
+This step is to setup an Emitter Vector that we can control every particles
+
+- First add the Emittor Vector in the header file, like this:
+	Vector<ParticleSystemQuad *> mEmitterList;
+
+- Then, in setupCsb method, add the logic to bind the Emittor like this:
+
+	// Clean up first
+	mEmitterList.clear();
+
+	// Define the EmitterList and
+	// By default
+	int numFirework = 10;
+
+
+	for(int i=1; i<=numFirework; i++) {
+	std::string nodeName = StringUtils::format("firework%d", i);
+
+	ParticleSystemQuad *particle = rootNode->getChildByName<ParticleSystemQuad *>(nodeName);
+	if(particle != nullptr) {
+	mEmitterList.pushBack(particle);
+	}
+	}
+
+	// Prevent all emitter being activated
+	for(ParticleSystemQuad *particle : mEmitterList) {
+	particle->stopSystem();
+	}
+
+- And then run the test again
+
+Expected: 
+- Nothing happen when create the View
+
+What's next? 
+- make a specific emitter fire as we wish to
+
 

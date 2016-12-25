@@ -38,5 +38,28 @@ void FireworkView::setupCsb(const std::string &csbName)
 	addChild(rootNode);
 	
 	setContentSize(rootNode->getContentSize());		// update the layout size based on the CSB size
+	
+	
+	// Clean up first
+	mEmitterList.clear();
+	
+	// Define the EmitterList and
+	// By default
+	int numFirework = 10;
+	
+	
+	for(int i=1; i<=numFirework; i++) {
+		std::string nodeName = StringUtils::format("firework%d", i);
+		
+		ParticleSystemQuad *particle = rootNode->getChildByName<ParticleSystemQuad *>(nodeName);
+		if(particle != nullptr) {
+			mEmitterList.pushBack(particle);
+		}
+	}
+	
+	// Prevent all emitter being activated
+	for(ParticleSystemQuad *particle : mEmitterList) {
+		particle->stopSystem();
+	}
 }
 
