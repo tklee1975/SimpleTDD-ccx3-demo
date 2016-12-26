@@ -9,11 +9,14 @@
 #include "FireworkView.h"
 #include "cocostudio/CocoStudio.h"
 
+const float kCooldown = 0.3f;
 
 using namespace cocos2d::ui;
 
 
 FireworkView::FireworkView()
+: mCooldown(0)
+, mCounter(0)
 {
 	
 }
@@ -75,3 +78,41 @@ void FireworkView::activateEmitter(int index)
 }
 
 
+#pragma mark - Firework scheduling
+void FireworkView::startFirework()
+{
+	scheduleUpdate();
+}
+
+void FireworkView::stopFirework()
+{
+	unscheduleUpdate();
+	
+	// Prevent all emitter being activated
+	for(ParticleSystemQuad *particle : mEmitterList) {
+		particle->stopSystem();
+	}
+}
+
+void FireworkView::update(float delta)
+{
+	mCooldown -= delta;
+	
+	if(mCooldown > 0) {	// Not yet activate
+		return;
+	}
+	
+	mCooldown = 0.1f * RandomHelper::random_int(5, 12);	// random interval
+	activateEmitter(mCounter);
+	updateCounter();
+}
+
+int FireworkView::getEmitterCount()
+{
+	return (int) mEmitterList.size();
+}
+
+void FireworkView::updateCounter()
+{
+	mCounter = (mCounter + 1) % getEmitterCount();
+}

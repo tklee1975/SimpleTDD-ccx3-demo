@@ -25,6 +25,8 @@ protected:
 private:
 	void testCreate();
 	void testActivateEmittor();
+	void testStartFirework();
+	void testStopFirework();
 	
 private:
 	FireworkView *mFireworkView;

@@ -46,6 +46,8 @@ void FireworkViewTest::defineTests()
 {
 	ADD_TEST(testCreate);
 	ADD_TEST(testActivateEmittor);
+	ADD_TEST(testStartFirework);
+	ADD_TEST(testStopFirework);
 }
 
 #pragma mark -
@@ -71,6 +73,17 @@ void FireworkViewTest::testActivateEmittor()
 	if(idx >= 5) {
 		idx = 1;
 	}
+}
+
+
+void FireworkViewTest::testStartFirework()
+{
+	mFireworkView->startFirework();
+}
+
+void FireworkViewTest::testStopFirework()
+{
+	mFireworkView->stopFirework();
 }
 
 #endif

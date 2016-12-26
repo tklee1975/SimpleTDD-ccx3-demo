@@ -31,6 +31,22 @@ public:
 	
 	void activateEmitter(int index);
 	
+	
+#pragma mark - Firework scheduling
+public:
+	void startFirework();
+	void stopFirework();
+	void update(float delta);
+	int getEmitterCount();
+	
+private:
+	void updateCounter();
+	
+private:
+	int mCounter;
+	float mCooldown;
+
+	
 private:
 	Vector<ParticleSystemQuad *> mEmitterList;
 };

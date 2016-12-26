@@ -242,6 +242,10 @@ you can emulate the firework manually by clicking the 'testActivateEmittor';
 But it is not good by manual, we will try to automate it in next step
 
 
+Step 5: Make the firework fire automatically    
+-------------------------------
+
+
 
 
 
