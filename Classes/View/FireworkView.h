@@ -29,6 +29,8 @@ public:
 	
 	void setupCsb(const std::string &csbFile);
 	
+	void activateEmitter(int index);
+	
 private:
 	Vector<ParticleSystemQuad *> mEmitterList;
 };

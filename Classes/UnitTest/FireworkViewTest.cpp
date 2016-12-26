@@ -12,6 +12,14 @@ void FireworkViewTest::setUp()
 {
 	log("TDD Setup is called");
 	setBackgroundColor(Color3B::BLACK);
+	
+	FireworkView *view = FireworkView::create();
+	view->setAnchorPoint(Vec2(0.5, 0.5f));
+	view->setPosition(Vec2(250, 160));
+	
+	addChild(view);
+
+	mFireworkView = view;
 }
 
 
@@ -37,6 +45,7 @@ void FireworkViewTest::didRunTest(const std::string &name)
 void FireworkViewTest::defineTests()
 {
 	ADD_TEST(testCreate);
+	ADD_TEST(testActivateEmittor);
 }
 
 #pragma mark -
@@ -51,5 +60,17 @@ void FireworkViewTest::testCreate()
 	
 }
 
+void FireworkViewTest::testActivateEmittor()
+{
+	static int idx = 1;
+
+	
+	mFireworkView->activateEmitter(idx);
+	
+	idx++;
+	if(idx >= 5) {
+		idx = 1;
+	}
+}
 
 #endif

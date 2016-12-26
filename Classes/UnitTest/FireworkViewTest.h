@@ -10,6 +10,8 @@
 
 #include "TDDBaseTest.h"
 
+class FireworkView;
+
 // Class Declaration
 class FireworkViewTest : public TDDBaseTest
 {
@@ -22,6 +24,10 @@ protected:
 	
 private:
 	void testCreate();
+	void testActivateEmittor();
+	
+private:
+	FireworkView *mFireworkView;
 };
 
 #endif

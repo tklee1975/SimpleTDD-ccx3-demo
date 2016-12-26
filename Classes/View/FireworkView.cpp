@@ -63,3 +63,15 @@ void FireworkView::setupCsb(const std::string &csbName)
 	}
 }
 
+void FireworkView::activateEmitter(int index)
+{
+	if(index < 0 || index >= mEmitterList.size()) {
+		log("FireworkLayer::activateEmitter: out of bound. index=%d", index);
+		return;
+	}
+	
+	ParticleSystemQuad *particle = mEmitterList.at(index);
+	particle->resetSystem();
+}
+
+
