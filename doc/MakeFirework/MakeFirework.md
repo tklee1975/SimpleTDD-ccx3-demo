@@ -245,8 +245,63 @@ But it is not good by manual, we will try to automate it in next step
 Step 5: Make the firework fire automatically    
 -------------------------------
 
+Finally add logic to make Firework fire automatically.
+
+FireworkView Class
+
+void FireworkView::startFirework()
+{
+	scheduleUpdate();
+}
+
+void FireworkView::stopFirework()
+{
+	unscheduleUpdate();
+
+	// Prevent all emitter being activated
+	for(ParticleSystemQuad *particle : mEmitterList) {
+		particle->stopSystem();
+	}
+}
+
+void FireworkView::update(float delta)
+{
+	mCooldown -= delta;
+
+	if(mCooldown > 0) {	// Not yet activate
+		return;
+	}
+
+	mCooldown = 0.1f * RandomHelper::random_int(5, 12);	// random interval
+	activateEmitter(mCounter);
+	updateCounter();
+}
+
+int FireworkView::getEmitterCount()
+{
+	return (int) mEmitterList.size();
+}
+
+void FireworkView::updateCounter()
+{
+	mCounter = (mCounter + 1) % getEmitterCount();
+}
+
+- In the FireworkView, add two method 'startFirework' and 'stopFirework' 
+to control the firework play and pause;
+- Add the firework playing logic in the update logic and it will be called when scheduleUpdate is called.
 
 
+Unit Test 
+FireworkViewTest 
 
+void FireworkViewTest::testStartFirework()
+{
+	mFireworkView->startFirework();
+}
 
+void FireworkViewTest::testStopFirework()
+{
+	mFireworkView->stopFirework();
+}
 
