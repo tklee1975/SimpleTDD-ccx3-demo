@@ -31,13 +31,13 @@ github:
 
 Setup #1: Prepare the firework particle
 -------------------------------
-- Go to http://particle2dx.com/ an online free particle maker
-- Go to the template and select "fw1" in the "Firework" section
-- Adjust a bit the particle 
+Go to http://particle2dx.com/ an online free particle maker
+Go to the template and select "fw1" in the "Firework" section
+Adjust a bit the particle 
 	My Setting is:
 	- GravityY set to -400  
 	- Using Additive blend instead
-- Export the particle and test it in the CocosStudio
+Export the particle and test it in the CocosStudio
 
 Expect output: the particle files (particle.list and particle.png) are ready to use.
 
@@ -100,6 +100,7 @@ This step is to create an unit test to the FireworkView
 	- when success, an unit test called 'FireworkViewTest' in '/Classes/UnitTest' folder
 - Add "FireworkViewTest.cpp" and "FireworkViewTest.h" to the project
 - Change testSample in FireworkViewTest to testCreate and add the following source
+[code language="cpp"]
 	void FireworkViewTest::testCreate()
 	{
 		FireworkView *view = FireworkView::create();
@@ -109,18 +110,21 @@ This step is to create an unit test to the FireworkView
 		addChild(view);
 
 	}
+[/code]
 - Modiy "MyTDDCases.h" and "FireworkViewTest" to it like this
-	#include "FireworkViewTest.h"
+[code language="cpp"]
+   #include "FireworkViewTest.h"
 
 	TDD_CASES
 	{
 		TEST(FireworkViewTest),
 		... 
+[/code]
 
 - Run the Test (Main Screen -> Click "simpleTDD" -> Click "FireworkViewTest" -> Click "testCreate")
 
 Expected: 
-- You will the five particle fire at the same time.
+- You will see all 5 particles fire at the same time.
 
 What's next? 
 - We are not expect the particles fire at the same time. 
@@ -132,10 +136,12 @@ Step 3: Setup the Emitter array
 This step is to setup an Emitter Vector that we can control every particles
 
 FireworkView.h
+[code language="cpp"]
 	Vector<ParticleSystemQuad *> mEmitterList;
+[/code]
 
 FireworkView.cpp
-
+[code language="cpp"]
 // Clean up first
 mEmitterList.clear();
 
@@ -145,18 +151,19 @@ int numFirework = 10;
 
 
 for(int i=1; i<=numFirework; i++) {
-std::string nodeName = StringUtils::format("firework%d", i);
+	std::string nodeName = StringUtils::format("firework%d", i);
 
-ParticleSystemQuad *particle = rootNode->getChildByName<ParticleSystemQuad *>(nodeName);
-if(particle != nullptr) {
-mEmitterList.pushBack(particle);
-}
+	ParticleSystemQuad *particle = rootNode->getChildByName<ParticleSystemQuad *>(nodeName);
+	if(particle != nullptr) {
+		mEmitterList.pushBack(particle);
+	}
 }
 
 // Prevent all emitter being activated
 for(ParticleSystemQuad *particle : mEmitterList) {
-particle->stopSystem();
+	particle->stopSystem();
 }
+[/code]
 
 
 
@@ -182,9 +189,12 @@ Step 4: Activate a specific firework
 This step is to add code to make specific firework fire;
 
 FireworkView.h
+[code language="cpp"]
 void activateEmitter(int index);
+[/code]
 
 FireworkView.cpp
+[code language="cpp"]
 void FireworkView::activateEmitter(int index)
 {
 	if(index < 0 || index >= mEmitterList.size()) {
@@ -195,16 +205,19 @@ void FireworkView::activateEmitter(int index)
 	ParticleSystemQuad *particle = mEmitterList.at(index);
 	particle->resetSystem();
 }
-
+[/code]
 In the FireworkView, add the method 'activateEmitter', the implementation is simply
 call 'resetSystem' for the particle system from the given index;
 
 
 FireworkViewTest.h
+[code language="cpp"]
 void testActivateEmittor();
 FireworkView *mFireworkView;
+[/code]
 
 FireworkViewTest.cpp
+[code language="cpp"]
 void FireworkViewTest::setUp()
 {
 	log("TDD Setup is called");
@@ -231,6 +244,7 @@ void FireworkViewTest::testActivateEmittor()
 		idx = 1;
 	}
 }
+[/code]
 
 In the UnitTest, first add a FireworkView in the view and link to a variable 'mFireworkView'
 and then add the test method 'testActivateEmittor';
@@ -248,7 +262,7 @@ Step 5: Make the firework fire automatically
 Finally add logic to make Firework fire automatically.
 
 FireworkView Class
-
+[code language="cpp"]
 void FireworkView::startFirework()
 {
 	scheduleUpdate();
@@ -286,6 +300,7 @@ void FireworkView::updateCounter()
 {
 	mCounter = (mCounter + 1) % getEmitterCount();
 }
+[/code]
 
 - In the FireworkView, add two method 'startFirework' and 'stopFirework' 
 to control the firework play and pause;
@@ -294,7 +309,7 @@ to control the firework play and pause;
 
 Unit Test 
 FireworkViewTest 
-
+[code language="cpp"]
 void FireworkViewTest::testStartFirework()
 {
 	mFireworkView->startFirework();
@@ -304,4 +319,10 @@ void FireworkViewTest::testStopFirework()
 {
 	mFireworkView->stopFirework();
 }
+[/code]
 
+Expected Result:
+- You can start and stop the firework in your unit test
+- In order to make the firework more fancy, you can modify the FireworkView that:
+	- The fire time interval can be configured.
+	- The order of the firework emitter is shuffled every time  
